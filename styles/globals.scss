@@ -1,0 +1,31 @@
+a {
+  border-radius: 7px !important;
+}
+
+.btn {
+  border-radius: 7px !important;
+}
+
+.hero-image {
+  object-fit: contain;
+  transition: opacity 1s ease-in-out;
+  width: 240px;
+  // overflow-x: hidden;
+
+  @media screen and (min-width: 766px) {
+    width: 500px;
+    height: 500px;
+  }
+  @media screen and (min-width: 1024px) {
+    width: 400px;
+    height: 400px;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 450px;
+    height: 450px;
+  }
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
