@@ -1,10 +1,5 @@
 import Head from "next/head";
-import { Inter } from "next/font/google";
-import Reservation from "@/components/Reservation";
-import Footer from "@/components/Footer";
-import FoodMenu from "@/components/FoodMenu";
-import AboutUsImageGallery from "@/components/AboutUsImageGallery";
-import ImageChanger from "@/components/ImageChanger/ImageChanger";
+
 import Link from "next/link";
 
 export default function Home() {

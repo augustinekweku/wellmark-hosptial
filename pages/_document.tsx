@@ -23,6 +23,7 @@ export default function Document() {
           href="/assets/img/hitabel-logo.png"
           type="image/x-icon"
         />
+        <meta name="description" content="Wellmark Specialist Hospital" />
       </Head>
       <body>
         <Main />
