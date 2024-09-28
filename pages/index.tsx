@@ -382,7 +382,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="section testimonial-2 gray-bg">
+        <section className="section testimonial-2 gray-bg d-none">
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-lg-7">
