@@ -1,7 +1,32 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 
+const NAV_LINKS = [
+  {
+    title: "Home",
+    href: "/",
+  },
+  {
+    title: "About",
+    href: "/about",
+  },
+  {
+    title: "Services",
+    href: "/services",
+  },
+  {
+    title: "Contact",
+    href: "/contact",
+  },
+];
+
 const Navbar = () => {
+  const router = useRouter();
+  const { pathname } = router;
+  function isActive(route: string) {
+    return route === pathname ? "active" : "";
+  }
   return (
     <header>
       <div className="header-top-bar">
@@ -52,166 +77,13 @@ const Navbar = () => {
 
           <div className="collapse navbar-collapse" id="navbarmain">
             <ul className="navbar-nav ml-auto">
-              <li className="nav-item active">
-                <a className="nav-link" href="index.html">
-                  Home
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="about.html">
-                  About
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="service.html">
-                  Services
-                </a>
-              </li>
-
-              <li className="nav-item dropdown d-none">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="department.html"
-                  id="dropdown02"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Department <i className="icofont-thin-down"></i>
-                </a>
-                <ul className="dropdown-menu" aria-labelledby="dropdown02">
-                  <li>
-                    <a className="dropdown-item" href="department.html">
-                      Departments
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="department-single.html">
-                      Department Single
-                    </a>
-                  </li>
-
-                  <li className="dropdown dropdown-submenu dropright">
-                    <a
-                      className="dropdown-item dropdown-toggle"
-                      href="#!"
-                      id="dropdown0301"
-                      role="button"
-                      data-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      Sub Menu
-                    </a>
-
-                    <ul
-                      className="dropdown-menu"
-                      aria-labelledby="dropdown0301"
-                    >
-                      <li>
-                        <a className="dropdown-item" href="index.html">
-                          Submenu 01
-                        </a>
-                      </li>
-                      <li>
-                        <a className="dropdown-item" href="index.html">
-                          Submenu 02
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-
-              <li className="nav-item dropdown d-none">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="doctor.html"
-                  id="dropdown03"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Doctors <i className="icofont-thin-down"></i>
-                </a>
-                <ul className="dropdown-menu" aria-labelledby="dropdown03">
-                  <li>
-                    <a className="dropdown-item" href="doctor.html">
-                      Doctors
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="doctor-single.html">
-                      Doctor Single
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="appoinment.html">
-                      Appoinment
-                    </a>
-                  </li>
-
-                  <li className="dropdown dropdown-submenu dropleft">
-                    <a
-                      className="dropdown-item dropdown-toggle"
-                      href="#!"
-                      id="dropdown0501"
-                      role="button"
-                      data-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      Sub Menu
-                    </a>
-
-                    <ul
-                      className="dropdown-menu"
-                      aria-labelledby="dropdown0501"
-                    >
-                      <li>
-                        <a className="dropdown-item" href="index.html">
-                          Submenu 01
-                        </a>
-                      </li>
-                      <li>
-                        <a className="dropdown-item" href="index.html">
-                          Submenu 02
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-
-              <li className="nav-item dropdown d-none">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="blog-sidebar.html"
-                  id="dropdown05"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Blog <i className="icofont-thin-down"></i>
-                </a>
-                <ul className="dropdown-menu" aria-labelledby="dropdown05">
-                  <li>
-                    <a className="dropdown-item" href="blog-sidebar.html">
-                      Blog with Sidebar
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="blog-single.html">
-                      Blog Single
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="contact.html">
-                  Contact
-                </a>
-              </li>
+              {NAV_LINKS.map((link) => (
+                <li className={`nav-item ${isActive(link.href)}`}>
+                  <Link href={link.href} className="nav-link">
+                    {link.title}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

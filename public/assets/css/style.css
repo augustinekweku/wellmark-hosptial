@@ -489,7 +489,7 @@ a:focus {
 }
 
 .bg-1 {
-  background: url("../images/bg/22.jpg") no-repeat 50% 50%;
+  background: url("../images/highlights/IMG_0437.jpg") no-repeat 50% 50%;
   background-size: cover;
   position: relative;
 }
@@ -497,10 +497,11 @@ a:focus {
 .banner {
   position: relative;
   overflow: hidden;
-  background: #fff;
-  background: url("../images/bg/slider-bg-1.jpg") no-repeat;
-  background-size: cover;
+  background: #ffffff;
+  background: url("../images/highlights/IMG_0437.jpg") no-repeat;
+  background-size: 105%;
   min-height: 550px;
+  background-position: 0px 0px;
 }
 .banner .block {
   padding: 80px 0px 160px;
@@ -510,8 +511,20 @@ a:focus {
   line-height: 1.2;
   letter-spacing: -1.2px;
   text-transform: capitalize;
-  color: #223a66;
+  color: #ffffff;
 }
+.banner .block p,  .banner .block span{
+  color: #ffffff;
+}
+
+.banner-wrapper{
+  position: absolute;
+  background: #223d70;
+  opacity: 0.65;
+  width: 100%;
+  height: 100%;
+}
+
 
 .letter-spacing {
   letter-spacing: 2px;
@@ -586,7 +599,6 @@ a:focus {
   width: 85%;
 }
 .appoinment-content .emergency {
-  position: absolute;
   content: "";
   right: 10px;
   bottom: 20px;
@@ -846,9 +858,20 @@ a:focus {
 }
 
 .cta-page {
-  background: url("../images/bg/banner.jpg") no-repeat;
+  background: url("../images/highlights/IMG_0490.jpg") no-repeat;
   background-size: cover;
   position: relative;
+  background-position: 0px -170px;
+}
+
+.cta-page:before {
+  position: absolute;
+  content: "";
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(34, 58, 102, 0.43);
 }
 
 .testimonial {
