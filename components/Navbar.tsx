@@ -60,7 +60,15 @@ const Navbar = () => {
       <nav className="navbar navbar-expand-lg navigation" id="navbar">
         <div className="container">
           <a className="navbar-brand" href="index.html">
-            <img src="images/logo.png" alt="" className="img-fluid" />
+            <img
+              src="assets/images/logo.png"
+              alt=""
+              className="img-fluid"
+              style={{
+                width: "100px",
+                height: "100px",
+              }}
+            />
           </a>
 
           <button

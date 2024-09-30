@@ -8,7 +8,15 @@ const Footer = () => {
           <div className="col-lg-4 mr-auto col-sm-6">
             <div className="widget mb-5 mb-lg-0">
               <div className="logo mb-4">
-                <img src="images/logo.png" alt="" className="img-fluid" />
+                <img
+                  src="assets/images/logo.png"
+                  alt=""
+                  className="img-fluid"
+                  style={{
+                    width: "150px",
+                    height: "auto",
+                  }}
+                />
               </div>
               <p>
                 Welcome to Wellmark Specialist Hospital, where compassionate

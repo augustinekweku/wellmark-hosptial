@@ -38,7 +38,7 @@ const contact = () => {
               <div className="contact-block mb-4 mb-lg-0">
                 <i className="icofont-location-pin"></i>
                 <h5>Location</h5>
-                Address Agbogba Antis Junction
+                Agbogba Antis Junction, Accra
               </div>
             </div>
           </div>
