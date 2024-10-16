@@ -9,9 +9,9 @@ const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
       <div>
         {children}{" "}
         <FloatingWhatsApp
-          phoneNumber="+233201024839"
-          accountName="Hi-Tabel"
-          avatar="/assets/img/hitabel-logo.png"
+          phoneNumber="+233500483753"
+          accountName="Wellmark Specialist Hospital"
+          avatar="/assets/img/logo.png"
         />
       </div>
       <Footer />

@@ -25,13 +25,13 @@ export default function Home() {
                   </span>
                   <h1 className="mb-3 mt-3">Wellmark Specialist Hospital</h1>
 
-                  <p className="mb-4 pr-5">
+                  <p className="mb-4 pr-5 mt-5 d-none d-lg-block banner-description">
                     Welcome to Wellmark Specialist Hospital, where compassionate
                     care meets cutting-edge technology. Founded in 2023, we have
                     served the community for a year, offering comprehensive
                     healthcare services across various specialties.
                   </p>
-                  <div className="btn-container ">
+                  <div className="btn-container  d-none d-lg-block banner-description-btn">
                     <a
                       href="appoinment.html"
                       target="_blank"
@@ -46,7 +46,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="features">
+        <section className="features mt-4">
           <div className="container">
             <div className="row">
               <div className="col-lg-12">
